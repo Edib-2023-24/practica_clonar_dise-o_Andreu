@@ -3,56 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- SEO = Básico -->
-    <!-- Cada página del sitio tiene que ser diferente el título y la descripción -->
     <title></title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
-    <meta property="og:title" content="Título de tu página" />
-    <meta property="og:description" content="Descripción de tu página" />
-    <meta
-      property="og:image"
-      content="URL de la imagen que quieres mostrar en las redes sociales"
-    />
-    <meta property="og:url" content="URL de tu página" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Título de tu página" />
-    <meta name="twitter:description" content="Descripción de tu página" />
-    <meta
-      name="twitter:image"
-      content="URL de la imagen que quieres mostrar en Twitter"
-    />
-
-    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
-    <link rel="manifest" href="site.webmanifest" />
-    <!-- icono de acceso para IOS -->
-    <link rel="apple-touch-icon" href="icon.png" />
-    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
-
-    <!-- links de estilos -->
     <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Se cambia el tema de algunos navegadores -->
-    <meta name="theme-color" content="#fafafa" />
-    <!-- Código de las plataformas de Análisis -->
-    <script></script>
-    <!-- Scripts a cargar antes de la renderización -->
-    <script src="preloader.js"></script>
   </head>
+
   <body>
     <div id="container">
-      <!-- *** ESTRUCTURA SEMÁNTICA *** -->
-      <!-- Header (encabezado de la página, zona superior) -->
       <header>
         <!-- nav (el navegador de toda la web) -->
         <nav>
-          <a href="" class="link1">link1</a>
-          <a href="" class="link2">link2</a>
-          <a href="" class="link3">link3</a>
-          <a href="" class="link4">link4</a>
+          <a href="index.html" class="header__link-logo">
+            <img src="svg/logo.svg" alt="logo" class="header__img-logo" />
+          </a>
+
+          <a href="index.html" class="header__home">home</a>
+          <a href="services.html" class="home__services">services</a>
+          <a href="suport.html" class="header__suport">suport</a>
+
+          <a href="contact-us.html" class="header__button-contact-us">
+            contact us
+          </a>
         </nav>
       </header>
       <!-- Main (centro de la página, zona central) -->
@@ -61,9 +31,55 @@
       </main>
       <!-- Footer (final de la página, zona inferior) -->
       <footer>
-        <h6>&copy;Copyright</h6>
+        
+        <section class="footer__section">
+          <a href="index.html" class="footer__link-logo">
+            <img src="svg/logo.svg" alt="logo" class="header__img-logo" />
+          </a>
+          
+          <h4 class="footer__servicios">SERVICES</h4>
+          
+          <h4 class="footer__support">SUPPORT</h4>
+          
+          
+          <p class="footer__parrafo">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+            aperiam, modi nulla mollitia, atque fugit sint quos omnis
+            necessitatibus quidem officiis exercitationem architecto nobis sit!
+            Veritatis temporibus vero quos nostrum.
+          </p>
+          
+          <ul class="footer__lista-servicios">
+            <li><a href="">UI/UX Design</a></li>
+            <li><a href="">Graphic Design</a></li>
+            <li><a href="">Web Design</a></li>
+            <li><a href="">App Development</a></li>
+          </ul>
+          
+          <ul class="footer__lista-contactos">
+            <li><a href="">+880 1938757563</a></li>
+            <li><a href="">sabbir.abirs99@gmail.com</a></li>
+            <li><a href="">Dhaka, Bangladesh</a></li>
+          </ul>
+          
+          <h6 class="footer__copyright">&copy;2021 Sabbir, All Right Reserved</h6>
+          
+          <ul class="footer__redes-sociales">
+            <a href="www.pinterest.com">
+              <img src="svg/pinterest.svg" alt="pinterest">
+            </a>
+            <a href="www.facebook.com">
+              <img src="svg/facebook.svg" alt="facebook">
+            </a>
+            <a href="www.twitter.com">
+              <img src="svg/twitter.svg" alt="twitter">
+            </a>
+            <a href="www.instagram.com">
+              <img src="svg/instagram.svg" alt="instagram">
+            </a>
+          </ul>
+        </section>
+        
       </footer>
-    </div>
-
   </body>
 </html>

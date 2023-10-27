@@ -8,12 +8,164 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Mayberry Regular";
+  src: url("../font/Mayberry\ W02\ Regular.woff2") format("woff2"),
+    url("../font/Mayberry\ W02\ Regular.woff") format("woff");
 }
 
-/* ******************************** */
+@font-face {
+  font-family: "Mayberry Black";
+  src: url("../font/Mayberry\ W02\ Black.woff2") format("woff2"),
+    url("../font/Mayberry\ W02\ Black.woff") format("woff");
+}
 
 /* Colores */
+:root {
+  --color-azul-oscuro: #032765;
+  --color-blanco: #fdfeff;
+  --color-lila: #b85dc4;
+  --color-lila-claro: #672fd0;
 
-/* ******************************** */
+  /* Tipografía*/
+  --tipo-parrafo: 1rem;
+  --tipo-subtitulo: 1.5rem;
+  --tipo-links: 1.125rem;
+
+  /* Tamaños */
+  --tam-anchoMaximo: 1640px;
+}
+
+html {
+  font-family: "Mayberry Regular", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  text-transform: uppercase;
+}
+
+header {
+  background: var(--color-azul-oscuro);
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & nav {
+    width: 100%;
+    max-width: 1640px;
+
+    display: flex;
+    align-items: center;
+    gap: 74px;
+    font-family: "Mayberry Black";
+
+    & .header__link-logo {
+      flex-grow: 1;
+    }
+
+    & .header__button-contact-us {
+      background: var(--color-blanco);
+      color: var(--color-azul-oscuro);
+      padding: 10px 40px;
+      border-radius: 20px;
+    }
+  }
+}
+
+footer {
+  background: linear-gradient(
+    180deg,
+    var(--color-lila) 0%,
+    var(--color-lila-claro) 40%,
+    var(--color-azul-oscuro) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .footer__section {
+    display: grid;
+    grid-template-columns:
+      [columna_1] 3fr
+      [columna_2] 1.5fr
+      [columna_3] 2fr
+      [columna_4] 1fr;
+    column-gap: 20px;
+    grid-template-rows: 5fr 5.3fr 3.5fr;
+    row-gap: 20px;
+
+    width: 100%;
+    max-width: 1640px;
+    height: 492px;
+
+    & p {
+      color: var(--color-blanco);
+    }
+
+    & .footer__link-logo {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    & .footer__servicios {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: flex;
+      align-items: flex-end;
+      color: var(--color-blanco);
+    }
+
+    & .footer__support {
+      grid-column: 3/-1;
+      grid-row: 1/1;
+      display: flex;
+      align-items: flex-end;
+      color: var(--color-blanco);
+    }
+
+    & .footer__lista-servicios {
+      /*SE PUEDE HACER CON FLEX O CON LINE-HEIGHT MEJOR
+      PARA CONTROLAR MEJOR
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;*/
+      line-height: 40px;
+    }
+
+    & .footer__lista-contactos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    & .footer__parrafo{
+      padding-right: 250px;
+    }
+
+    & .footer__copyright {
+      color: var(--color-blanco);
+      grid-column: 1/2;
+      grid-row: 3/4;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 30px;
+    }
+
+    & .footer__redes-sociales {
+      grid-column: 4/-1;
+      grid-row: 3/4;
+      display: flex;
+      gap: 10px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 30px;
+    }
+  }
+}
+
