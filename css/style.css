@@ -55,7 +55,7 @@ header {
 
   & nav {
     width: 100%;
-    max-width: 1640px;
+    max-width: var(--tam-anchoMaximo);
 
     display: flex;
     align-items: center;
@@ -71,6 +71,85 @@ header {
       color: var(--color-azul-oscuro);
       padding: 10px 40px;
       border-radius: 20px;
+    }
+  }
+}
+
+main {
+  & .main__servicios {
+    width: 100%;
+    height: 963px;
+    background: url(../svg/imagen_servicios.svg);
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .contenido-servicios {
+      width: 100%;
+      max-width: var(--tam-anchoMaximo);
+      height: 830px;
+      color: var(--color-azul-oscuro);
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 2.2fr;
+      row-gap: 50px;
+      column-gap: 20px;
+
+      & .contenido-servicios__titulo {
+        grid-column: 1/-1;
+
+        & .titulo__que-hacemos {
+          text-transform: uppercase;
+          font-family: "Mayberry Black";
+        }
+
+        & .titulo__nuestros-servicios {
+          text-transform: uppercase;
+          font-size: 45px;
+          font-family: "Mayberry Black";
+          margin-top: 20px;
+        }
+
+        & .titulo__parrafo {
+          width: 550px;
+          margin-top: 30px;
+          line-height: 35px;
+        }
+      }
+
+      & .contenido-servicios__design,
+      & .contenido-servicios__design2,
+      & .contenido-servicios__design3 {
+        padding: 30px;
+        box-shadow: 10px 10px rgba(87, 87, 87, 0.05);
+        background: rgba(248, 248, 248, 0.9);
+        color: var(--color-azul-oscuro);
+
+        & .circulo-imagen {
+          background: #9d9d9d;
+          width: 119px;
+          height: 119px;
+          border-radius: 50%;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        & figcaption h2 {
+          margin-top: 30px;
+          font-size: var(--tipo-subtitulo);
+        }
+
+        & figcaption p
+        & figcaption h4 {
+          margin-top: 30px;
+          font-size: 1.75rem;
+        }
+      }
     }
   }
 }
@@ -98,7 +177,7 @@ footer {
     row-gap: 20px;
 
     width: 100%;
-    max-width: 1640px;
+    max-width: var(--tam-anchoMaximo);
     height: 492px;
 
     & p {
@@ -118,6 +197,7 @@ footer {
       display: flex;
       align-items: flex-end;
       color: var(--color-blanco);
+      text-transform: uppercase;
     }
 
     & .footer__support {
@@ -126,11 +206,12 @@ footer {
       display: flex;
       align-items: flex-end;
       color: var(--color-blanco);
+      text-transform: uppercase;
     }
 
     & .footer__lista-servicios {
-      /*SE PUEDE HACER CON FLEX O CON LINE-HEIGHT MEJOR
-      PARA CONTROLAR MEJOR
+      /*SE PUEDE HACER CON FLEX O MEJOR CON 
+      LINE-HEIGHT PARA CONTROLAR MEJOR
 
       display: flex;
       flex-direction: column;
